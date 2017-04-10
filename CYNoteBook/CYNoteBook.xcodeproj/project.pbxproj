@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E71A50431E8E2478001A05E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50421E8E2478001A05E4 /* main.m */; };
+		E71A504E1E8E2478001A05E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71A504D1E8E2478001A05E4 /* Assets.xcassets */; };
+		E71A50511E8E2478001A05E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71A504F1E8E2478001A05E4 /* LaunchScreen.storyboard */; };
+		E71A505C1E8E2478001A05E4 /* CYNoteBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A505B1E8E2478001A05E4 /* CYNoteBookTests.m */; };
+		E71A50671E8E2478001A05E4 /* CYNoteBookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50661E8E2478001A05E4 /* CYNoteBookUITests.m */; };
+		E71A50841E8E268A001A05E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A507F1E8E268A001A05E4 /* AppDelegate.m */; };
+		E71A50881E8E26BB001A05E4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50861E8E26BB001A05E4 /* MainViewController.m */; };
+		E71A50891E8E26BB001A05E4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71A50871E8E26BB001A05E4 /* MainViewController.xib */; };
+		E71A508D1E8E2B5E001A05E4 /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A508B1E8E2B5E001A05E4 /* AddNoteViewController.m */; };
+		E71A508E1E8E2B5E001A05E4 /* AddNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71A508C1E8E2B5E001A05E4 /* AddNoteViewController.xib */; };
+		E71A50951E8E2BA7001A05E4 /* AllNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50931E8E2BA7001A05E4 /* AllNotesViewController.m */; };
+		E71A50961E8E2BA7001A05E4 /* AllNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71A50941E8E2BA7001A05E4 /* AllNotesViewController.xib */; };
+		E71A509A1E8E2BB8001A05E4 /* NoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50981E8E2BB8001A05E4 /* NoteDetailViewController.m */; };
+		E71A509B1E8E2BB8001A05E4 /* NoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71A50991E8E2BB8001A05E4 /* NoteDetailViewController.xib */; };
+		E71A509E1E8E30C5001A05E4 /* AllUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A509D1E8E30C5001A05E4 /* AllUtils.m */; };
+		E71A50BF1E8E32DE001A05E4 /* CYDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50BC1E8E32DE001A05E4 /* CYDBHelper.m */; };
+		E71A50C01E8E32DE001A05E4 /* CYDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50BE1E8E32DE001A05E4 /* CYDBModel.m */; };
+		E71A50C31E8E32EF001A05E4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E71A50C21E8E32EF001A05E4 /* libsqlite3.tbd */; };
+		E71A50C61E8E361D001A05E4 /* NoteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50C51E8E361D001A05E4 /* NoteUtils.m */; };
+		E71A50C91E8E5EB7001A05E4 /* NoteDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50C81E8E5EB7001A05E4 /* NoteDBModel.m */; };
+		E71A50D71E8E7583001A05E4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50CD1E8E7583001A05E4 /* FMDatabase.m */; };
+		E71A50D81E8E7583001A05E4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50CF1E8E7583001A05E4 /* FMDatabaseAdditions.m */; };
+		E71A50D91E8E7583001A05E4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50D11E8E7583001A05E4 /* FMDatabasePool.m */; };
+		E71A50DA1E8E7583001A05E4 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50D31E8E7583001A05E4 /* FMDatabaseQueue.m */; };
+		E71A50DB1E8E7583001A05E4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A50D61E8E7583001A05E4 /* FMResultSet.m */; };
+		E72B8D2A1E91538A00ACBB20 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D291E91538A00ACBB20 /* LocationManager.m */; };
+		E72B8D2D1E927EBE00ACBB20 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D2C1E927EBE00ACBB20 /* SettingTableViewController.m */; };
+		E72B8D361E95F8E500ACBB20 /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D351E95F8E500ACBB20 /* LockView.m */; };
+		E72B8D381E95F8F300ACBB20 /* LockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72B8D371E95F8F300ACBB20 /* LockView.xib */; };
+		E72B8D3B1E95FC5E00ACBB20 /* PasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D3A1E95FC5E00ACBB20 /* PasswordInputView.m */; };
+		E72B8D3E1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D3D1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.m */; };
+		E72B8D411E96441D00ACBB20 /* CYEditorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B8D401E96441C00ACBB20 /* CYEditorTextView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E71A50581E8E2478001A05E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E71A50361E8E2477001A05E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E71A503D1E8E2478001A05E4;
+			remoteInfo = TestNoteBook;
+		};
+		E71A50631E8E2478001A05E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E71A50361E8E2477001A05E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E71A503D1E8E2478001A05E4;
+			remoteInfo = TestNoteBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E71A503E1E8E2478001A05E4 /* CYNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71A50421E8E2478001A05E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E71A504D1E8E2478001A05E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E71A50501E8E2478001A05E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E71A50521E8E2478001A05E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E71A50571E8E2478001A05E4 /* CYNoteBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYNoteBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71A505B1E8E2478001A05E4 /* CYNoteBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYNoteBookTests.m; sourceTree = "<group>"; };
+		E71A505D1E8E2478001A05E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E71A50621E8E2478001A05E4 /* CYNoteBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYNoteBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71A50661E8E2478001A05E4 /* CYNoteBookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYNoteBookUITests.m; sourceTree = "<group>"; };
+		E71A50681E8E2478001A05E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E71A507E1E8E268A001A05E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E71A507F1E8E268A001A05E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E71A50851E8E26BB001A05E4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E71A50861E8E26BB001A05E4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E71A50871E8E26BB001A05E4 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E71A508A1E8E2B5E001A05E4 /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
+		E71A508B1E8E2B5E001A05E4 /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
+		E71A508C1E8E2B5E001A05E4 /* AddNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteViewController.xib; sourceTree = "<group>"; };
+		E71A50921E8E2BA7001A05E4 /* AllNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNotesViewController.h; sourceTree = "<group>"; };
+		E71A50931E8E2BA7001A05E4 /* AllNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNotesViewController.m; sourceTree = "<group>"; };
+		E71A50941E8E2BA7001A05E4 /* AllNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllNotesViewController.xib; sourceTree = "<group>"; };
+		E71A50971E8E2BB8001A05E4 /* NoteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDetailViewController.h; sourceTree = "<group>"; };
+		E71A50981E8E2BB8001A05E4 /* NoteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDetailViewController.m; sourceTree = "<group>"; };
+		E71A50991E8E2BB8001A05E4 /* NoteDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteDetailViewController.xib; sourceTree = "<group>"; };
+		E71A509C1E8E30C5001A05E4 /* AllUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUtils.h; sourceTree = "<group>"; };
+		E71A509D1E8E30C5001A05E4 /* AllUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUtils.m; sourceTree = "<group>"; };
+		E71A50BB1E8E32DE001A05E4 /* CYDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYDBHelper.h; sourceTree = "<group>"; };
+		E71A50BC1E8E32DE001A05E4 /* CYDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYDBHelper.m; sourceTree = "<group>"; };
+		E71A50BD1E8E32DE001A05E4 /* CYDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYDBModel.h; sourceTree = "<group>"; };
+		E71A50BE1E8E32DE001A05E4 /* CYDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYDBModel.m; sourceTree = "<group>"; };
+		E71A50C21E8E32EF001A05E4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E71A50C41E8E361D001A05E4 /* NoteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteUtils.h; sourceTree = "<group>"; };
+		E71A50C51E8E361D001A05E4 /* NoteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteUtils.m; sourceTree = "<group>"; };
+		E71A50C71E8E5EB7001A05E4 /* NoteDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDBModel.h; sourceTree = "<group>"; };
+		E71A50C81E8E5EB7001A05E4 /* NoteDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDBModel.m; sourceTree = "<group>"; };
+		E71A50CC1E8E7583001A05E4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E71A50CD1E8E7583001A05E4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E71A50CE1E8E7583001A05E4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E71A50CF1E8E7583001A05E4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E71A50D01E8E7583001A05E4 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E71A50D11E8E7583001A05E4 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E71A50D21E8E7583001A05E4 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E71A50D31E8E7583001A05E4 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E71A50D41E8E7583001A05E4 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		E71A50D51E8E7583001A05E4 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E71A50D61E8E7583001A05E4 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		E72B8D281E91538A00ACBB20 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		E72B8D291E91538A00ACBB20 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		E72B8D2B1E927EBE00ACBB20 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		E72B8D2C1E927EBE00ACBB20 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		E72B8D341E95F8E500ACBB20 /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
+		E72B8D351E95F8E500ACBB20 /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
+		E72B8D371E95F8F300ACBB20 /* LockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LockView.xib; sourceTree = "<group>"; };
+		E72B8D391E95FC5E00ACBB20 /* PasswordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordInputView.h; sourceTree = "<group>"; };
+		E72B8D3A1E95FC5E00ACBB20 /* PasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordInputView.m; sourceTree = "<group>"; };
+		E72B8D3C1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEditorTextAttachmentOverlayView.h; sourceTree = "<group>"; };
+		E72B8D3D1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEditorTextAttachmentOverlayView.m; sourceTree = "<group>"; };
+		E72B8D3F1E96441C00ACBB20 /* CYEditorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEditorTextView.h; sourceTree = "<group>"; };
+		E72B8D401E96441C00ACBB20 /* CYEditorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEditorTextView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E71A503B1E8E2478001A05E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71A50C31E8E32EF001A05E4 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A50541E8E2478001A05E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A505F1E8E2478001A05E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E71A50351E8E2477001A05E4 = {
+			isa = PBXGroup;
+			children = (
+				E71A50401E8E2478001A05E4 /* CYNoteBook */,
+				E71A505A1E8E2478001A05E4 /* CYNoteBookTests */,
+				E71A50651E8E2478001A05E4 /* CYNoteBookUITests */,
+				E71A503F1E8E2478001A05E4 /* Products */,
+				E71A50C11E8E32EE001A05E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E71A503F1E8E2478001A05E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E71A503E1E8E2478001A05E4 /* CYNoteBook.app */,
+				E71A50571E8E2478001A05E4 /* CYNoteBookTests.xctest */,
+				E71A50621E8E2478001A05E4 /* CYNoteBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E71A50401E8E2478001A05E4 /* CYNoteBook */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50CA1E8E7577001A05E4 /* Lib */,
+				E71A50741E8E268A001A05E4 /* Classes */,
+				E71A504D1E8E2478001A05E4 /* Assets.xcassets */,
+				E71A504F1E8E2478001A05E4 /* LaunchScreen.storyboard */,
+				E71A50521E8E2478001A05E4 /* Info.plist */,
+				E71A50411E8E2478001A05E4 /* Supporting Files */,
+			);
+			path = CYNoteBook;
+			sourceTree = "<group>";
+		};
+		E71A50411E8E2478001A05E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50421E8E2478001A05E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E71A505A1E8E2478001A05E4 /* CYNoteBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				E71A505B1E8E2478001A05E4 /* CYNoteBookTests.m */,
+				E71A505D1E8E2478001A05E4 /* Info.plist */,
+			);
+			path = CYNoteBookTests;
+			sourceTree = "<group>";
+		};
+		E71A50651E8E2478001A05E4 /* CYNoteBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50661E8E2478001A05E4 /* CYNoteBookUITests.m */,
+				E71A50681E8E2478001A05E4 /* Info.plist */,
+			);
+			path = CYNoteBookUITests;
+			sourceTree = "<group>";
+		};
+		E71A50741E8E268A001A05E4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50801E8E268A001A05E4 /* Tool */,
+				E71A507D1E8E268A001A05E4 /* Other */,
+				E71A50751E8E268A001A05E4 /* Main */,
+				E71A50791E8E268A001A05E4 /* Note */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E71A50751E8E268A001A05E4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50761E8E268A001A05E4 /* Controllers */,
+				E71A50771E8E268A001A05E4 /* Models */,
+				E71A50781E8E268A001A05E4 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E71A50761E8E268A001A05E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50851E8E26BB001A05E4 /* MainViewController.h */,
+				E71A50861E8E26BB001A05E4 /* MainViewController.m */,
+				E71A50871E8E26BB001A05E4 /* MainViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E71A50771E8E268A001A05E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E71A50781E8E268A001A05E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E72B8D341E95F8E500ACBB20 /* LockView.h */,
+				E72B8D351E95F8E500ACBB20 /* LockView.m */,
+				E72B8D371E95F8F300ACBB20 /* LockView.xib */,
+				E72B8D391E95FC5E00ACBB20 /* PasswordInputView.h */,
+				E72B8D3A1E95FC5E00ACBB20 /* PasswordInputView.m */,
+				E72B8D3C1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.h */,
+				E72B8D3D1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.m */,
+				E72B8D3F1E96441C00ACBB20 /* CYEditorTextView.h */,
+				E72B8D401E96441C00ACBB20 /* CYEditorTextView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E71A50791E8E268A001A05E4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				E71A507A1E8E268A001A05E4 /* Controllers */,
+				E71A507B1E8E268A001A05E4 /* Models */,
+				E71A507C1E8E268A001A05E4 /* Views */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		E71A507A1E8E268A001A05E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E71A508A1E8E2B5E001A05E4 /* AddNoteViewController.h */,
+				E71A508B1E8E2B5E001A05E4 /* AddNoteViewController.m */,
+				E71A508C1E8E2B5E001A05E4 /* AddNoteViewController.xib */,
+				E71A50921E8E2BA7001A05E4 /* AllNotesViewController.h */,
+				E71A50931E8E2BA7001A05E4 /* AllNotesViewController.m */,
+				E71A50941E8E2BA7001A05E4 /* AllNotesViewController.xib */,
+				E71A50971E8E2BB8001A05E4 /* NoteDetailViewController.h */,
+				E71A50981E8E2BB8001A05E4 /* NoteDetailViewController.m */,
+				E71A50991E8E2BB8001A05E4 /* NoteDetailViewController.xib */,
+				E72B8D2B1E927EBE00ACBB20 /* SettingTableViewController.h */,
+				E72B8D2C1E927EBE00ACBB20 /* SettingTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E71A507B1E8E268A001A05E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E71A507C1E8E268A001A05E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E71A507D1E8E268A001A05E4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E71A507E1E8E268A001A05E4 /* AppDelegate.h */,
+				E71A507F1E8E268A001A05E4 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E71A50801E8E268A001A05E4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50BB1E8E32DE001A05E4 /* CYDBHelper.h */,
+				E71A50BC1E8E32DE001A05E4 /* CYDBHelper.m */,
+				E71A50BD1E8E32DE001A05E4 /* CYDBModel.h */,
+				E71A50BE1E8E32DE001A05E4 /* CYDBModel.m */,
+				E71A509C1E8E30C5001A05E4 /* AllUtils.h */,
+				E71A509D1E8E30C5001A05E4 /* AllUtils.m */,
+				E71A50C41E8E361D001A05E4 /* NoteUtils.h */,
+				E71A50C51E8E361D001A05E4 /* NoteUtils.m */,
+				E71A50C71E8E5EB7001A05E4 /* NoteDBModel.h */,
+				E71A50C81E8E5EB7001A05E4 /* NoteDBModel.m */,
+				E72B8D281E91538A00ACBB20 /* LocationManager.h */,
+				E72B8D291E91538A00ACBB20 /* LocationManager.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E71A50C11E8E32EE001A05E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50C21E8E32EF001A05E4 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E71A50CA1E8E7577001A05E4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50CB1E8E7583001A05E4 /* fmdb */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E71A50CB1E8E7583001A05E4 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				E71A50CC1E8E7583001A05E4 /* FMDatabase.h */,
+				E71A50CD1E8E7583001A05E4 /* FMDatabase.m */,
+				E71A50CE1E8E7583001A05E4 /* FMDatabaseAdditions.h */,
+				E71A50CF1E8E7583001A05E4 /* FMDatabaseAdditions.m */,
+				E71A50D01E8E7583001A05E4 /* FMDatabasePool.h */,
+				E71A50D11E8E7583001A05E4 /* FMDatabasePool.m */,
+				E71A50D21E8E7583001A05E4 /* FMDatabaseQueue.h */,
+				E71A50D31E8E7583001A05E4 /* FMDatabaseQueue.m */,
+				E71A50D41E8E7583001A05E4 /* FMDB.h */,
+				E71A50D51E8E7583001A05E4 /* FMResultSet.h */,
+				E71A50D61E8E7583001A05E4 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E71A503D1E8E2478001A05E4 /* CYNoteBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E71A506B1E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBook" */;
+			buildPhases = (
+				E71A503A1E8E2478001A05E4 /* Sources */,
+				E71A503B1E8E2478001A05E4 /* Frameworks */,
+				E71A503C1E8E2478001A05E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CYNoteBook;
+			productName = TestNoteBook;
+			productReference = E71A503E1E8E2478001A05E4 /* CYNoteBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E71A50561E8E2478001A05E4 /* CYNoteBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E71A506E1E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBookTests" */;
+			buildPhases = (
+				E71A50531E8E2478001A05E4 /* Sources */,
+				E71A50541E8E2478001A05E4 /* Frameworks */,
+				E71A50551E8E2478001A05E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E71A50591E8E2478001A05E4 /* PBXTargetDependency */,
+			);
+			name = CYNoteBookTests;
+			productName = TestNoteBookTests;
+			productReference = E71A50571E8E2478001A05E4 /* CYNoteBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E71A50611E8E2478001A05E4 /* CYNoteBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E71A50711E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBookUITests" */;
+			buildPhases = (
+				E71A505E1E8E2478001A05E4 /* Sources */,
+				E71A505F1E8E2478001A05E4 /* Frameworks */,
+				E71A50601E8E2478001A05E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E71A50641E8E2478001A05E4 /* PBXTargetDependency */,
+			);
+			name = CYNoteBookUITests;
+			productName = TestNoteBookUITests;
+			productReference = E71A50621E8E2478001A05E4 /* CYNoteBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E71A50361E8E2477001A05E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Cyrill;
+				TargetAttributes = {
+					E71A503D1E8E2478001A05E4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7ENE4DHQ7N;
+						ProvisioningStyle = Automatic;
+					};
+					E71A50561E8E2478001A05E4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7ENE4DHQ7N;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E71A503D1E8E2478001A05E4;
+					};
+					E71A50611E8E2478001A05E4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7ENE4DHQ7N;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E71A503D1E8E2478001A05E4;
+					};
+				};
+			};
+			buildConfigurationList = E71A50391E8E2477001A05E4 /* Build configuration list for PBXProject "CYNoteBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E71A50351E8E2477001A05E4;
+			productRefGroup = E71A503F1E8E2478001A05E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E71A503D1E8E2478001A05E4 /* CYNoteBook */,
+				E71A50561E8E2478001A05E4 /* CYNoteBookTests */,
+				E71A50611E8E2478001A05E4 /* CYNoteBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E71A503C1E8E2478001A05E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71A508E1E8E2B5E001A05E4 /* AddNoteViewController.xib in Resources */,
+				E72B8D381E95F8F300ACBB20 /* LockView.xib in Resources */,
+				E71A50961E8E2BA7001A05E4 /* AllNotesViewController.xib in Resources */,
+				E71A50511E8E2478001A05E4 /* LaunchScreen.storyboard in Resources */,
+				E71A50891E8E26BB001A05E4 /* MainViewController.xib in Resources */,
+				E71A504E1E8E2478001A05E4 /* Assets.xcassets in Resources */,
+				E71A509B1E8E2BB8001A05E4 /* NoteDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A50551E8E2478001A05E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A50601E8E2478001A05E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E71A503A1E8E2478001A05E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71A508D1E8E2B5E001A05E4 /* AddNoteViewController.m in Sources */,
+				E71A50841E8E268A001A05E4 /* AppDelegate.m in Sources */,
+				E71A50951E8E2BA7001A05E4 /* AllNotesViewController.m in Sources */,
+				E71A50D71E8E7583001A05E4 /* FMDatabase.m in Sources */,
+				E72B8D2D1E927EBE00ACBB20 /* SettingTableViewController.m in Sources */,
+				E71A50881E8E26BB001A05E4 /* MainViewController.m in Sources */,
+				E71A50DA1E8E7583001A05E4 /* FMDatabaseQueue.m in Sources */,
+				E71A50DB1E8E7583001A05E4 /* FMResultSet.m in Sources */,
+				E72B8D3B1E95FC5E00ACBB20 /* PasswordInputView.m in Sources */,
+				E71A50431E8E2478001A05E4 /* main.m in Sources */,
+				E72B8D361E95F8E500ACBB20 /* LockView.m in Sources */,
+				E72B8D2A1E91538A00ACBB20 /* LocationManager.m in Sources */,
+				E72B8D411E96441D00ACBB20 /* CYEditorTextView.m in Sources */,
+				E71A50C91E8E5EB7001A05E4 /* NoteDBModel.m in Sources */,
+				E71A50BF1E8E32DE001A05E4 /* CYDBHelper.m in Sources */,
+				E72B8D3E1E9643BD00ACBB20 /* CYEditorTextAttachmentOverlayView.m in Sources */,
+				E71A50D81E8E7583001A05E4 /* FMDatabaseAdditions.m in Sources */,
+				E71A50C01E8E32DE001A05E4 /* CYDBModel.m in Sources */,
+				E71A509E1E8E30C5001A05E4 /* AllUtils.m in Sources */,
+				E71A50D91E8E7583001A05E4 /* FMDatabasePool.m in Sources */,
+				E71A50C61E8E361D001A05E4 /* NoteUtils.m in Sources */,
+				E71A509A1E8E2BB8001A05E4 /* NoteDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A50531E8E2478001A05E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71A505C1E8E2478001A05E4 /* CYNoteBookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71A505E1E8E2478001A05E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71A50671E8E2478001A05E4 /* CYNoteBookUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E71A50591E8E2478001A05E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E71A503D1E8E2478001A05E4 /* CYNoteBook */;
+			targetProxy = E71A50581E8E2478001A05E4 /* PBXContainerItemProxy */;
+		};
+		E71A50641E8E2478001A05E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E71A503D1E8E2478001A05E4 /* CYNoteBook */;
+			targetProxy = E71A50631E8E2478001A05E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E71A504F1E8E2478001A05E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E71A50501E8E2478001A05E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E71A50691E8E2478001A05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E71A506A1E8E2478001A05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E71A506C1E8E2478001A05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E71A506D1E8E2478001A05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E71A506F1E8E2478001A05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CYNoteBook.app/CYNoteBook";
+			};
+			name = Debug;
+		};
+		E71A50701E8E2478001A05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CYNoteBook.app/CYNoteBook";
+			};
+			name = Release;
+		};
+		E71A50721E8E2478001A05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CYNoteBook;
+			};
+			name = Debug;
+		};
+		E71A50731E8E2478001A05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				INFOPLIST_FILE = CYNoteBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYNoteBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CYNoteBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E71A50391E8E2477001A05E4 /* Build configuration list for PBXProject "CYNoteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71A50691E8E2478001A05E4 /* Debug */,
+				E71A506A1E8E2478001A05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E71A506B1E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71A506C1E8E2478001A05E4 /* Debug */,
+				E71A506D1E8E2478001A05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E71A506E1E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71A506F1E8E2478001A05E4 /* Debug */,
+				E71A50701E8E2478001A05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E71A50711E8E2478001A05E4 /* Build configuration list for PBXNativeTarget "CYNoteBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E71A50721E8E2478001A05E4 /* Debug */,
+				E71A50731E8E2478001A05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E71A50361E8E2477001A05E4 /* Project object */;
+}
