@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) UIImage *image;
 
+@property (nonatomic, strong) NSMutableArray *imgs;
+
 @property (nonatomic, strong) LocationManager *manager;
 
 @end
@@ -75,15 +77,19 @@
         model.noteLocation = location;
         
         if (self.image) {
-            NSArray *array = @[self.image];
-            
+            NSArray *array = self.imgs;
             NSMutableData *dd = [[NSMutableData alloc] init];
-            
             NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:dd];
             [archiver encodeObject:array forKey:@"kArchivingDataKey"]; // archivingDate的encodeWithCoder
             [archiver finishEncoding];
-            
             model.images = dd;
+            
+            NSArray *pathArray = self.noteTextTextView.textContainer.exclusionPaths;
+            NSMutableData *pathsData = [[NSMutableData alloc] init];
+            NSKeyedArchiver *pathsArchiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:pathsData];
+            [pathsArchiver encodeObject:pathArray forKey:@"kPathsArchivingDataKey"]; // archivingDate的encodeWithCoder
+            [pathsArchiver finishEncoding];
+            model.imageRectPaths = pathsData;
         }
         
         
@@ -126,6 +132,8 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
+    [self.imgs addObject:original];
+    
     NSArray *array = @[self.image];
     self.noteTextTextView.imagesArray = [NSMutableArray arrayWithArray:array];
     
@@ -135,6 +143,13 @@
     
     [self.noteTitleTextField endEditing:YES];
     [self.noteTextTextView endEditing:YES];
+}
+
+- (NSMutableArray *)imgs {
+    if (!_imgs) {
+        _imgs = [[NSMutableArray alloc] init];
+    }
+    return _imgs;
 }
 
 

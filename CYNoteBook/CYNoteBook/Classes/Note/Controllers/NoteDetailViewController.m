@@ -9,13 +9,14 @@
 #import "NoteDetailViewController.h"
 #import "NoteUtils.h"
 #import "AllUtils.h"
+#import "CYEditorTextView.h"
 #import "NoteDBModel.h"
 
 @interface NoteDetailViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UITextField *noteTitleTextField;
-@property (weak, nonatomic) IBOutlet UITextView *noteTextTextView;
+@property (weak, nonatomic) IBOutlet CYEditorTextView *noteTextTextView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
@@ -37,15 +38,22 @@
     self.locationLabel.text = self.model.noteLocation;
     
     if (self.model.images) {
+        
+        self.noteTextTextView.isAdded = YES;
+        
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:self.model.images];
         
         //获得类
         NSArray *arr = [unarchiver decodeObjectForKey:@"kArchivingDataKey"];// initWithCoder方法被调用
         [unarchiver finishDecoding];
         
-        UIImage *image = arr[0];
+        self.noteTextTextView.imagesArray = [NSMutableArray arrayWithArray:arr];
         
-        self.imageView.image = image;
+        NSKeyedUnarchiver *pathsUnarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:self.model.imageRectPaths];
+        NSArray *array = [pathsUnarchiver decodeObjectForKey:@"kPathsArchivingDataKey"]; // archivingDate的encodeWithCoder
+        [pathsUnarchiver finishDecoding];
+        
+        self.noteTextTextView.pathArr = array;
     }
 }
 

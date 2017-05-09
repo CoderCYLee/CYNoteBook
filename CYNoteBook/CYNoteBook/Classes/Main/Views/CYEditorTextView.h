@@ -12,4 +12,8 @@
 
 @property (nonatomic, strong) NSMutableArray *imagesArray;
 
+@property (nonatomic, strong) NSArray *pathArr;
+
+@property (nonatomic, assign) BOOL isAdded;
+
 @end

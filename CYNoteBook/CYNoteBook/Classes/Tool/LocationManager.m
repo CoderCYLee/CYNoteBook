@@ -76,7 +76,7 @@
     [_locationManager stopUpdatingLocation];
     
     //创建地理信息编解码对象
-    CLGeocoder *geoCoder = [[CLGeocoder alloc]init];
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
     
     //转换位置信息
     [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -84,10 +84,15 @@
         CLPlacemark *placeMark = placemarks[0];
         NSLog(@"%@%@",placeMark.country,placeMark.locality);
         
-        self.address = [NSString stringWithFormat:@"%@ %@ %@ %@ %@",placeMark.country,placeMark.locality,placeMark.subLocality, placeMark.thoroughfare, placeMark.subThoroughfare];
+//        self.address = [NSString stringWithFormat:@"%@ %@ %@ %@ %@",placeMark.country,placeMark.locality,placeMark.subLocality, placeMark.thoroughfare, placeMark.subThoroughfare];
+        
+        NSDictionary *dict = placeMark.addressDictionary;
+        NSArray *arr = dict[@"FormattedAddressLines"];
+        
+        self.address = [arr firstObject];
         
         self.addressBlock(self.address);
-        
+        NSLog(@"%@", placeMark.addressDictionary);
         NSLog(@"%@",self.address);
     }];
 }

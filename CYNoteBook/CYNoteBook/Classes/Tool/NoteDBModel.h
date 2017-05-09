@@ -19,6 +19,7 @@
 @property (nonatomic, assign) NSInteger noteId;
 
 @property (nonatomic, strong) NSData *images;
+@property (nonatomic, strong) NSData *imageRectPaths;
 @property (nonatomic, strong) NSData *videos;
 
 @end
