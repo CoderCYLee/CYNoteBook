@@ -20,14 +20,12 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     NSLog(@"\n ===> 程序开始 !");
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
     
     MainViewController *mainVC = [[MainViewController alloc] init];
     self.window.rootViewController = mainVC;
@@ -55,53 +53,7 @@
     [self.window addSubview:self.lockView];
     [self.window addSubview:self.coverView];
     
-    
-    
-    
 }
-
-- (void)touchID {
-    LAContext *_context = [[LAContext alloc] init];
-    NSError *error;
-    //Whether the device support touch ID? ---if it's yes,support!Otherwise,the system version is lower than iOS8.
-    if([_context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error])
-    {
-        
-        NSLog(@"Yeah,Support touch ID");
-        
-        //if return yes,whether your fingerprint correct.
-        [_context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请输入指纹进入" reply:^(BOOL success, NSError * _Nullable error) {
-            if (success)
-            {
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                        self.lockView.alpha = 0;
-                        self.lockView.transform = CGAffineTransformMakeScale(1.5, 1.5);
-                        
-                    } completion:^(BOOL finished) {
-                        [self.lockView removeFromSuperview];
-                        self.lockView = nil;
-                    }];
-                });
-                
-            }
-            else
-            {
-                
-                NSLog(@"fail");
-            }
-        }];
-    }
-    else
-    {
-        
-        
-        NSLog(@"Sorry,The device doesn't support touch ID");
-    }
-}
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
@@ -110,7 +62,7 @@
     [self.coverView removeFromSuperview];
     self.coverView = nil;
     
-    [self touchID];
+    [self authID];
 }
 
 
@@ -127,8 +79,52 @@
     
 }
 
-- (LockView *)lockView
-{
+#pragma mark - private methods
+- (void)authID {
+    if (@available(iOS 8.0, *)) {
+        LAContext *context = [[LAContext alloc] init];
+        NSString *localizedReason = @"指纹登录";
+        if (@available(iOS 11.0, *)) {
+            if (context.biometryType == LABiometryTypeTouchID) {
+            } else if (context.biometryType == LABiometryTypeFaceID){
+                localizedReason = @"Face ID登录";
+            }
+        } else {
+            NSLog(@"Sorry,The device doesn't support Face ID");
+        }
+        
+        NSError *error;
+        if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+            [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
+                if (success) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                            self.lockView.alpha = 0;
+                            self.lockView.transform = CGAffineTransformMakeScale(1.5, 1.5);
+                            
+                        } completion:^(BOOL finished) {
+                            [self.lockView removeFromSuperview];
+                            self.lockView = nil;
+                        }];
+                    });
+                } else {
+                    NSLog(@"fail");
+                }
+            }];
+        } else {
+            NSLog(@"Sorry,The device doesn't support touch ID");
+        }
+    }
+}
+
+- (void)go {
+    [self.lockView removeFromSuperview];
+    self.lockView = nil;
+}
+
+#pragma mark - getters and setters
+- (LockView *)lockView {
     if (!_lockView) {
         _lockView = [[[NSBundle mainBundle] loadNibNamed:@"LockView" owner:self options:nil] firstObject];
         _lockView.frame = self.window.bounds;
@@ -140,8 +136,7 @@
     return _lockView;
 }
 
-- (UIVisualEffectView *)coverView
-{
+- (UIVisualEffectView *)coverView {
     if (!_coverView) {
         UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         _coverView = [[UIVisualEffectView alloc] initWithFrame:self.window.bounds];
@@ -149,12 +144,5 @@
     }
     return _coverView;
 }
-
-
-- (void)go {
-    [self.lockView removeFromSuperview];
-    self.lockView = nil;
-}
-
 
 @end
