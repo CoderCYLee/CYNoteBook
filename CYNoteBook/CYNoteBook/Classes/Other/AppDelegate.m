@@ -82,6 +82,7 @@
                         
                     } completion:^(BOOL finished) {
                         [self.lockView removeFromSuperview];
+                        self.lockView = nil;
                     }];
                 });
                 
